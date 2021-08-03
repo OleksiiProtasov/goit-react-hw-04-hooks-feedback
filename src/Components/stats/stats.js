@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "../stats/stats.css";
+import PropTypes from "prop-types";
 
-const Stats = ({ stats: { good, neutral, bad }, total, getPositive }) => {
+const Stats = ({ statistics: { good, neutral, bad }, total, getPositive }) => {
   return (
     <>
       <p className={styles.item}> Good: {good} </p>
@@ -13,5 +14,11 @@ const Stats = ({ stats: { good, neutral, bad }, total, getPositive }) => {
       </div>
     </>
   );
+};
+
+Stats.propTypes = {
+  total: PropTypes.number.isRequired,
+  getPositive: PropTypes.number.isRequired,
+  statistics: PropTypes.object.isRequired,
 };
 export default Stats;

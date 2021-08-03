@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../Container/containerStyle.module.css";
+import styles from "../Sections/style.module.css";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 
-const FeedbackOptions = ({ onChangeStats }) => {
+const FeedbackOptions = ({ option, onChangeStats }) => {
   return (
     <>
       <h1 className={styles.item}>Please leave feedback</h1>
